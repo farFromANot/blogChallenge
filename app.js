@@ -39,15 +39,15 @@ app.get("/contact", function(req, res){
 
 app.get("/compose", function(req, res){
   
-
   res.render("compose", {
     
   })
 })
 
 app.post("/compose", function(req, res){
-  let posting = req.body.posting
-  console.log(posting)
+  let postTitle = req.body.postTitle
+  let postBody = req.body.postBody
+  console.log(postTitle,postBody)
 })
 
 
