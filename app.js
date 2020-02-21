@@ -47,17 +47,12 @@ app.get("/compose", function(req, res){
 })
 
 app.post("/compose", function(req, res){
-<<<<<<< HEAD
-  let posting = req.body.title
-  console.log(posting)
-=======
     const post = {
       title: req.body.postTitle,
       content: req.body.postBody
     }
     posts.push(post)
     res.redirect("/")
->>>>>>> 08a675b5916ed77eee7f79be7adcec893ede4f12
 })
 
 
