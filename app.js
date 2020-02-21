@@ -46,7 +46,7 @@ app.get("/compose", function(req, res){
 })
 
 app.post("/compose", function(req, res){
-  let posting = req.body.posting
+  let posting = req.body.title
   console.log(posting)
 })
 
