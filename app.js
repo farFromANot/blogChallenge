@@ -16,13 +16,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-  
+let posts = []
 
 
 app.get("/", function(req, res){
   res.render("home", {
-    startingContent: homeStartingContent
+    startingContent: homeStartingContent,
+    posting: posts
   })
+  
 })
 
 app.get("/about", function(req, res){
@@ -39,15 +41,23 @@ app.get("/contact", function(req, res){
 
 app.get("/compose", function(req, res){
   
-
   res.render("compose", {
     
   })
 })
 
 app.post("/compose", function(req, res){
+<<<<<<< HEAD
   let posting = req.body.title
   console.log(posting)
+=======
+    const post = {
+      title: req.body.postTitle,
+      content: req.body.postBody
+    }
+    posts.push(post)
+    res.redirect("/")
+>>>>>>> 08a675b5916ed77eee7f79be7adcec893ede4f12
 })
 
 
