@@ -3,14 +3,16 @@
 <h1>Home</h1>
 <p><%= startingContent %></p>
 
-<!-- <% for (let i = 0; i < posting.length; i++) { %>
-    <% console.log(posting[i].title) %>
-<% } %> -->
 
 
 
-<% posting.forEach(function(post){ %>
-    <% console.log(post.title) %>
+
+<% posts.forEach(post => { %>
+    <h1><%= post.title %></h1>
+    <p>
+        <%= post.content.substring(0, 100) + "..."%>
+        <a href="/posts/ <%= post.title %>">Read More</a>
+    </p>
 <% }) %>
 
 
